@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer namorar cmg??</title>
+    <style>
+
+        /*  créditos viictor048  */
+
+        #credits_viictor048 {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            color: red;
+            font-size: 11pt;
+            margin: 2px;
+            z-index: 9999999999999999 !important;
+            -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.45)) !important;
+            background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 190, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255), rgb(255, 0, 60));
+            background-size: 400%;
+            word-spacing: 2px;
+            font-weight: 1000;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            animation: fade 15s linear infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+
+        body {
+            background: #fefefe;
+            overflow: hidden !important;
+        }
+
+        main {
+            display: flex;
+            justify-content: center !important;
+            align-items: center;
+        }
+
+        main h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+        }
+
+        .button {
+            padding-top: 75px;
+            position: absolute;
+            display: flex;
+        }
+
+        .b1 {
+            padding: 5px;
+        }
+
+        .b1 button {
+            background: blue;
+            border-radius: 5px;
+            color: white;
+            border: 1px solid rgba(0, 0, 0, .5);
+        }
+
+        .b2 {
+            padding: 5px;
+        }
+
+        .b2 button {
+            background: red;
+            border-radius: 5px;
+            color: white;
+            border: 1px solid rgba(0, 0, 0, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <span id="credits_viictor048">Criado Por: viictor048</span>
+        <h1>Quer namorar cmg??</h1>
+        <div class="button">
+            <div class="b1">
+                <button id="b1">SIM</button>
+            </div>
+            <!--  -->
+            <div class="b2">
+                <button id="b2">NÃO</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(() => {
+        $(".b2").hover((e) => {
+            e.preventDefault();
+            let width = $(window).width();
+            let height = $(window).height();
+
+            document.querySelector(".b2").style.marginLeft = Math.floor(Math.random() * (width / 2) - 10) + "px";
+            document.querySelector(".b2").style.marginTop = Math.floor(Math.random() * (height / 2) - 10) + "px";
+            document.querySelector(".b2").style.position = "absolute";
+            document.querySelector(".b2").style.padding = "100px";
+        });
+        $("#b1").click((e) => {
+            e.preventDefault();
+            alert("Claro que sim!");
+        });
+        $("#b2").click((e) => {
+            e.preventDefault();
+            alert("Essa opção não está disponivel!");
+        });
+    });
+</script>
+  
+  
